@@ -3,14 +3,17 @@ import * as Icon from 'react-feather';
 import { ApiContext } from "@/context/apiContext";
 
 export default function City() {
-  const {infosCity, addFav} = React.useContext(ApiContext);
+  const {infosCity, fav, addFav} = React.useContext(ApiContext);
   const [like, setLike] = React.useState(false);
-  const isLike = () => {
-    setLike(true);
-  }
+
+  React.useEffect(() => {
+    const isFavotrite = fav?.some(city => city === infosCity?.location.name);
+    if (isFavotrite) setLike(true);
+  }, [fav]);
+
   return (
     <div className="flex flex-col p-4 rounded bg-[#FFFFFF] w-64 h-96 items-center justify-around">
-      <button className="flex items-end ml-40" onClick={isLike}>
+      <button className="flex items-end ml-40" onClick={() => addFav(infosCity?.location.name)}>
         <Icon.Heart fill={like === false ? "none" : "yes"} onClick={() => addFav(infosCity?.location.name)}/>
       </button>
       <div className="flex flex-col items-center gap-y-8">
