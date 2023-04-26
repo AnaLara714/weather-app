@@ -14,11 +14,11 @@ export default function Main() {
       !itFound 
         ? isLoading 
           ? ""
-          : "max-sm:h-screen bg-[#f1f5f9]"
+          : "max-sm:h-screen  bg-[#f1f5f9]"
         : infosCity?.current.is_day === 1 
-        ? "bg-[#fbbf24]" 
+        ? "bg-[#fbbf24] " 
         : "bg-[#155e75]"
-    } max-sm:h-max h-max p-4 flex flex-col `}
+    } max-sm:h-max p-4 h-screen max-lg:h-max flex flex-col `}
     >
       <ToastContainer
         position="top-center" autoClose={2000} hideProgressBar={false} newestOnTop={false}

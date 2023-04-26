@@ -12,7 +12,7 @@ export default function City() {
   }, [fav]);
 
   return (
-    <div className="flex flex-col p-4 rounded bg-[#FFFFFF] w-64 h-96 items-center justify-around">
+    <div className="flex flex-col p-4 rounded bg-[#FFFFFF] w-64 h-[25rem] items-center justify-around">
       <button className="flex items-end ml-40" onClick={() => addFav(infosCity?.location.name)}>
         <Icon.Heart fill={like === false ? "none" : "yes"} onClick={() => addFav(infosCity?.location.name)}/>
       </button>

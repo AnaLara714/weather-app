@@ -25,7 +25,7 @@ export default function Others() {
   }
 
   return (
-    <div className="max-sm:h-max max-sm:justify-center max-xl:justify-center max-xl:w-[32rem] flex flex-row flex-wrap gap-y-2 gap-x-6 w-[58rem] h-80 justify-start ">
+    <div className="max-sm:h-max max-sm:justify-center max-xl:justify-center max-xl:w-[32rem] flex flex-row flex-wrap gap-y-2 gap-x-6 w-[58rem] justify-start ">
       <Item information="Humidade" value={infosCity?.current.humidity} measure="%" icon={<Icon.Droplet/>}/>
       <Item information="UV" value={infosCity?.current.uv} measure="nm" icon={<Icon.Sun/>}/>
       <Item information="Visibilidade" value={infosCity?.current.vis_km} measure="km" />
