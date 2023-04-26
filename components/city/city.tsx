@@ -8,7 +8,7 @@ export default function City() {
 
   React.useEffect(() => {
     const isFavotrite = fav?.some(city => city === infosCity?.location.name);
-    if (isFavotrite) setLike(true);
+    isFavotrite  ? setLike(true) : setLike(false)
   }, [fav]);
 
   return (

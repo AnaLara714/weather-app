@@ -18,7 +18,7 @@ export default function Main() {
         : infosCity?.current.is_day === 1 
         ? "bg-[#fbbf24]" 
         : "bg-[#155e75]"
-    } max-sm:h-max h-screen p-4 flex flex-col `}
+    } max-sm:h-max h-max p-4 flex flex-col `}
     >
       <ToastContainer
         position="top-center" autoClose={2000} hideProgressBar={false} newestOnTop={false}

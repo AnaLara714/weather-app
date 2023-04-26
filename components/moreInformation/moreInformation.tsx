@@ -27,6 +27,10 @@ export default function Others() {
   return (
     <div className="max-sm:h-max max-sm:justify-center max-xl:justify-center max-xl:w-[32rem] flex flex-row flex-wrap gap-y-2 gap-x-6 w-[58rem] h-80 justify-start ">
       <Item information="Humidade" value={infosCity?.current.humidity} measure="%" icon={<Icon.Droplet/>}/>
+      <Item information="UV" value={infosCity?.current.uv} measure="nm" icon={<Icon.Sun/>}/>
+      <Item information="Visibilidade" value={infosCity?.current.vis_km} measure="km" />
+      <Item information="Nuvens" value={infosCity?.current.cloud} measure="%" icon={<Icon.Cloud/>}/>
+      <Item information="Possibilidade de chuva" value={infosCity?.forecast.forecastday[0]?.day.daily_chance_of_rain} measure="%" icon={<Icon.CloudRain/>}/>
       <Item information="Velocidade do vento" value={infosCity?.current.wind_kph} measure="Km/h" icon={<Icon.Wind/>}/>
       <Item information="Direção do vento" value={infosCity?.current.wind_dir} icon={<Icon.Compass/>}/>
       <Item information="Temperatura" value={infosCity?.current.temp_c} measure="°C" icon={<Icon.Thermometer />}/>
@@ -37,7 +41,3 @@ export default function Others() {
     </div>
   )
 }
-/**
-      <span>Temperatura F: {infosCity?.current.temp_f}</span>
-      <span>Sensação Térmica F: {infosCity?.current.feelslike_f}</span>
- */

@@ -32,7 +32,7 @@ export default function MenuDropdrown() {
         Favoritos
         <img src={isOpen == true ? "/icons/chevron-up.svg" : "/icons/chevron-down.svg"} alt="" />
       </button>
-      <div className={`max-[320px]:left-0 absolute right-0 bg-white rounded-lg w-52 shadow-xl ${isOpen === true ? "block": "hidden"}`} >
+      <div className={`max-[360px]:left-0 absolute right-0 bg-white rounded-lg w-52 shadow-xl ${isOpen === true ? "block": "hidden"}`} >
         {fav?.map((city: string) => {
           return <Item city={city} />
         })}

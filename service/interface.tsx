@@ -11,6 +11,8 @@ export interface IDataWeather {
     "wind_dir": number; //direcao do vento
     "vis_km": number;
     "is_day": number;
+    "uv": number;
+    "cloud": number;
     "feelslike_c": number; // sensação termica C
     "feelslike_f": number; // sensação termica F
     "temp_c": number; //temperatura em c
@@ -22,6 +24,9 @@ export interface IDataWeather {
   },
   forecast: {
     "forecastday": [{
+      "day": {
+        "daily_chance_of_rain": number;
+      },
       "astro": {
         "sunrise": string,
         "sunset": string,
@@ -29,7 +34,4 @@ export interface IDataWeather {
         "moonset": string,
     }}
   ]}
-// - Visibilidade;
-// - Horário de nascer do sol;
-// - Horário de por do sol;
 }
